@@ -1,0 +1,8 @@
+# Editor Files
+.idea/
+.vs/
+.vsc/
+
+# Build Files
+obj/
+bin/
