@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notifi.NET.Singletons", "Notifi.NET.Singletons\Notifi.NET.Singletons.csproj", "{2BF762CB-D02B-4663-9824-9369FDA24286}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notifi.NET.Logging", "Notifi.NET.Logging\Notifi.NET.Logging.csproj", "{60BB91EC-9290-4143-A39A-530BFEEEA467}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notifi.NET.Logging", "Notifi.NET.Logging\Notifi.NET.Logging.csproj", "{60BB91EC-9290-4143-A39A-530BFEEEA467}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notifi.NET.DatabaseContext", "Notifi.NET.DatabaseContext\Notifi.NET.DatabaseContext.csproj", "{1EA87047-07AB-4A7E-98B5-0BEE485897DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{60BB91EC-9290-4143-A39A-530BFEEEA467}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60BB91EC-9290-4143-A39A-530BFEEEA467}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60BB91EC-9290-4143-A39A-530BFEEEA467}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EA87047-07AB-4A7E-98B5-0BEE485897DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EA87047-07AB-4A7E-98B5-0BEE485897DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EA87047-07AB-4A7E-98B5-0BEE485897DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EA87047-07AB-4A7E-98B5-0BEE485897DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
