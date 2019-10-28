@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
 using Notifi.NET.DatabaseContext.Models.Towiccho;
+using Notifi.NET.DatabaseContext.Models.Yotubii;
 
 namespace Notifi.NET.DatabaseContext
 {
@@ -11,5 +12,7 @@ namespace Notifi.NET.DatabaseContext
         }
 
         public DbSet<TowicchoSubscription> TowicchoSubscriptions { get; set; }
+
+        public DbSet<YotubiiSubscription> YotubiiSubscriptions { get; set; }
     }
 }

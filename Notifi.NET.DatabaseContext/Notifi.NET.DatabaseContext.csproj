@@ -1,7 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <PackageProjectUrl>https://github.com/thenotifiproject</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/thenotifiproject/Notifi.NET</RepositoryUrl>
+    <Company>The Notifi Project</Company>
+    <Authors>Nejc Drobnič, The Notifi Project</Authors>
+    <Copyright>Copyright (C) 2019 &lt;The Notifi Project&gt;</Copyright>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Notifi</PackageTags>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>0.1.0</Version>
+    <PackageLicenseUrl>https://github.com/thenotifiproject/Notifi.NET/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>https://avatars1.githubusercontent.com/u/56926196?s=400&amp;u=f7f7c41163c98cb94143b2cfa1a3795e2c788ff9&amp;v=4</PackageIconUrl>
+    <Description>The Entity Framework Core schema used in Notifi notification microservices.</Description>
+    <Product>Notifi.NET.DatabaseContext</Product>
+    <PackageId>Notifi.NET.DatabaseContext</PackageId>
+    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

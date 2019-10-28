@@ -85,7 +85,7 @@ namespace Notifi.NET.DatabaseContext.Migrations
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnName("at_creat")
+                        .HasColumnName("at_create")
                         .HasColumnType("timestamp without time zone");
 
                     b.Property<DateTime>("ExpireAt")
@@ -110,11 +110,77 @@ namespace Notifi.NET.DatabaseContext.Migrations
                     b.ToTable("TowicchoSubscriptions");
                 });
 
+            modelBuilder.Entity("Notifi.NET.DatabaseContext.Models.Yotubii.YotubiiSubscriberGuild", b =>
+                {
+                    b.Property<long>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("id")
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("ChannelID")
+                        .IsRequired()
+                        .HasColumnName("channel_id")
+                        .HasColumnType("text");
+
+                    b.Property<string>("EmbedHash")
+                        .IsRequired()
+                        .HasColumnName("embed_hash")
+                        .HasColumnType("text");
+
+                    b.Property<string>("GuildID")
+                        .IsRequired()
+                        .HasColumnName("guild_id")
+                        .HasColumnType("text");
+
+                    b.Property<int>("Language")
+                        .HasColumnName("language")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("SubscribingUserID")
+                        .IsRequired()
+                        .HasColumnName("subscribing_user_id")
+                        .HasColumnType("text");
+
+                    b.Property<long?>("YotubiiSubscriptionID")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("YotubiiSubscriptionID");
+
+                    b.ToTable("YotubiiSubscriberGuild");
+                });
+
+            modelBuilder.Entity("Notifi.NET.DatabaseContext.Models.Yotubii.YotubiiSubscription", b =>
+                {
+                    b.Property<long>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("id")
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnName("at_create")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("YotubiiSubscriptions");
+                });
+
             modelBuilder.Entity("Notifi.NET.DatabaseContext.Models.Towiccho.TowicchoSubscriberGuild", b =>
                 {
                     b.HasOne("Notifi.NET.DatabaseContext.Models.Towiccho.TowicchoSubscription", null)
                         .WithMany("Guilds")
                         .HasForeignKey("TowicchoSubscriptionID");
+                });
+
+            modelBuilder.Entity("Notifi.NET.DatabaseContext.Models.Yotubii.YotubiiSubscriberGuild", b =>
+                {
+                    b.HasOne("Notifi.NET.DatabaseContext.Models.Yotubii.YotubiiSubscription", null)
+                        .WithMany("Guilds")
+                        .HasForeignKey("YotubiiSubscriptionID");
                 });
 #pragma warning restore 612, 618
         }

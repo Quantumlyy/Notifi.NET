@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Notifi.NET.DatabaseContext.Models.Towiccho
 {
-    class TowicchoSubscription : IEquatable<TowicchoSubscription>
+    class TowicchoSubscription : SubscriptionBase<TowicchoSubscriberGuild>, IEquatable<TowicchoSubscription>
     {
         [Key]
         [Required]
@@ -18,16 +18,8 @@ namespace Notifi.NET.DatabaseContext.Models.Towiccho
         public string TwitchID { get; set; }
 
         [Required]
-        [Column("guilds")]
-        public List<TowicchoSubscriberGuild> Guilds { get; set; }
-
-        [Required]
         [Column("streaming_status")]
         public bool IsStreaming { get; set; }
-
-        [Required]
-        [Column("at_creat")]
-        public DateTime CreatedAt { get; set; }
 
         [Required]
         [Column("at_fetch")]
@@ -43,17 +35,16 @@ namespace Notifi.NET.DatabaseContext.Models.Towiccho
         public bool Equals([AllowNull] TowicchoSubscription other)
         {
             return other != null &&
+                   base.Equals(other) &&
                    ID == other.ID &&
                    TwitchID == other.TwitchID &&
-                   EqualityComparer<List<TowicchoSubscriberGuild>>.Default.Equals(Guilds, other.Guilds) &&
                    IsStreaming == other.IsStreaming &&
-                   CreatedAt == other.CreatedAt &&
                    FetchedAt == other.FetchedAt &&
                    ExpireAt == other.ExpireAt;
         }
 
         public override int GetHashCode()
-            => HashCode.Combine(ID, TwitchID, Guilds, IsStreaming, CreatedAt, FetchedAt, ExpireAt);
+            => HashCode.Combine(base.GetHashCode(), ID, TwitchID, IsStreaming, FetchedAt, ExpireAt);
 
         public static bool operator ==(TowicchoSubscription left, TowicchoSubscription right)
             => EqualityComparer<TowicchoSubscription>.Default.Equals(left, right);
