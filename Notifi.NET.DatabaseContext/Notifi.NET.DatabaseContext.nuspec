@@ -1,18 +1,32 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
-    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
-    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
-    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
-    <copyright>Copyright 2019</copyright>
-    <tags>Tag1 Tag2</tags>
+    <id>Notifi.NET.DatabaseContext</id>
+    <version>0.4.0</version>
+    <title>Notifi.NET.DatabaseContext</title>
+    <authors>Nejc Drobnič, The Notifi Project</authors>
+    <owners>The Notifi Project</owners>
+    <license type="expression">GPL-3.0-only</license>
+    <projectUrl>https://github.com/thenotifiproject/Notifi.NET</projectUrl>
+    <icon>publish\logo\logo.png</icon>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>The Entity Framework Core schema used in Notifi notification microservices.</description>
+    <releaseNotes>Initial Release.</releaseNotes>
+    <copyright>Copyright (C) 2019 &lt;The Notifi Project&gt;</copyright>
+    <tags>Notifi Schema Entity Notifications</tags>
+    <language>en-US</language>
+
+    <dependencies>
+      <group targetFramework="netcoreapp3.0">
+        <dependency id="Microsoft.EntityFrameworkCore" version="3.0.0" />
+        <dependency id="Npgsql.EntityFrameworkCore.PostgreSQL" version="3.0.1" />
+        <dependency id="System.ComponentModel" version="4.3.0" />
+        <dependency id="System.ComponentModel.Annotations" version="4.6.0" />
+      </group>
+    </dependencies>
   </metadata>
+
+  <files>
+    <file src=".\publish\logo\logo.png" target="\publish\logo\" />
+  </files>
 </package>

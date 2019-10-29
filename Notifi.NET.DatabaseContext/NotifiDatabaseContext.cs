@@ -5,9 +5,9 @@ using Notifi.NET.DatabaseContext.Models.Yotubii;
 
 namespace Notifi.NET.DatabaseContext
 {
-    class DatabaseContext : DbContext
+    class NotifiDatabaseContext : DbContext
     {
-        public DatabaseContext(DbContextOptions options) : base(options)
+        public NotifiDatabaseContext(DbContextOptions options) : base(options)
         {
         }
 
