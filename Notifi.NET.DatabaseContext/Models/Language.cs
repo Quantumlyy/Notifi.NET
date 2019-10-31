@@ -1,6 +1,8 @@
-﻿namespace Notifi.NET.DatabaseContext.Models
+﻿#pragma warning disable CS1591
+
+namespace Notifi.NET.DatabaseContext.Models
 {
-    enum Language
+    public enum Language
     {
         EnUS,
         ElGR

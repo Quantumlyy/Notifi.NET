@@ -1,4 +1,6 @@
-﻿using System;
+﻿#pragma warning disable CS1591
+
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.ComponentModel.DataAnnotations;
@@ -6,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Notifi.NET.DatabaseContext.Models.Towiccho
 {
-    class TowicchoSubscription : SubscriptionBase<TowicchoSubscriberGuild>, IEquatable<TowicchoSubscription>
+    public class TowicchoSubscription : SubscriptionBase<TowicchoSubscriberGuild>, IEquatable<TowicchoSubscription>
     {
         [Key]
         [Required]

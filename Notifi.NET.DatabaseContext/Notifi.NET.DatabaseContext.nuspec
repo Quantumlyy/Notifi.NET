@@ -1,23 +1,22 @@
-<?xml version="1.0"?>
-<package >
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Notifi.NET.DatabaseContext</id>
-    <version>0.4.0</version>
+    <version>0.12.0</version>
     <title>Notifi.NET.DatabaseContext</title>
-    <authors>Nejc Drobnič, The Notifi Project</authors>
+    <authors>Nejc Drobnič,The Notifi Project</authors>
     <owners>The Notifi Project</owners>
-    <license type="expression">GPL-3.0-only</license>
-    <projectUrl>https://github.com/thenotifiproject/Notifi.NET</projectUrl>
-    <icon>publish\logo\logo.png</icon>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">GPL-3.0-only</license>
+    <icon>publish\logo\logo.png</icon>
+    <projectUrl>https://github.com/thenotifiproject/Notifi.NET</projectUrl>
     <description>The Entity Framework Core schema used in Notifi notification microservices.</description>
-    <releaseNotes>Initial Release.</releaseNotes>
+    <releaseNotes>Make all Classes and Enums public.</releaseNotes>
     <copyright>Copyright (C) 2019 &lt;The Notifi Project&gt;</copyright>
-    <tags>Notifi Schema Entity Notifications</tags>
     <language>en-US</language>
-
+    <tags>Notifi Schema Entity Notifications</tags>
     <dependencies>
-      <group targetFramework="netcoreapp3.0">
+      <group targetFramework=".NETCoreApp3.0">
         <dependency id="Microsoft.EntityFrameworkCore" version="3.0.0" />
         <dependency id="Npgsql.EntityFrameworkCore.PostgreSQL" version="3.0.1" />
         <dependency id="System.ComponentModel" version="4.3.0" />
@@ -27,6 +26,12 @@
   </metadata>
 
   <files>
-    <file src=".\publish\logo\logo.png" target="\publish\logo\" />
+    <file src="bin\Release\netcoreapp3.0\Notifi.NET.DatabaseContext.dll" target="lib\netcoreapp3.0" />
+    <file src="bin\Release\netcoreapp3.0\Notifi.NET.DatabaseContext.pdb" target="lib\netcoreapp3.0" />
+    <file src="bin\Release\netcoreapp3.0\Notifi.NET.DatabaseContext.xml" target="lib\netcoreapp3.0" />
+
+    <file src="**\*.cs" target="src" />
+
+    <file src="publish\logo\logo.png" target="publish\logo\logo.png" />
   </files>
 </package>

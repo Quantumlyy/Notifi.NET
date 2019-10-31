@@ -1,11 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿#pragma warning disable CS1591
 
+using Microsoft.EntityFrameworkCore;
 using Notifi.NET.DatabaseContext.Models.Towiccho;
 using Notifi.NET.DatabaseContext.Models.Yotubii;
 
 namespace Notifi.NET.DatabaseContext
 {
-    class NotifiDatabaseContext : DbContext
+
+    public class NotifiDatabaseContext : DbContext
     {
         public NotifiDatabaseContext(DbContextOptions options) : base(options)
         {

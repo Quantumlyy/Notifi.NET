@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <PackageProjectUrl>https://github.com/thenotifiproject/Notifi.NET</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/thenotifiproject</PackageProjectUrl>
     <RepositoryUrl>https://github.com/thenotifiproject/Notifi.NET</RepositoryUrl>
     <Company>The Notifi Project</Company>
     <Authors>Nejc Drobnič, The Notifi Project</Authors>
@@ -11,13 +11,14 @@
     <PackageTags>Notifi</PackageTags>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>0.4.0</Version>
+    <Version>0.6.0</Version>
     <PackageLicenseUrl>https://github.com/thenotifiproject/Notifi.NET/blob/master/LICENSE</PackageLicenseUrl>
     <PackageIcon>logo.png</PackageIcon>
     <Description>The Entity Framework Core schema used in Notifi notification microservices.</Description>
     <Product>Notifi.NET.DatabaseContext</Product>
     <PackageId>Notifi.NET.DatabaseContext</PackageId>
     <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+    <Platforms>AnyCPU;x64;x86</Platforms>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -37,7 +38,7 @@
   </ItemGroup>
   
   <ItemGroup>
-      <None Include="publish\logo\logo.png" Pack="true" PackagePath="\"/>
+      <None Include="publish\logo\logo.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
