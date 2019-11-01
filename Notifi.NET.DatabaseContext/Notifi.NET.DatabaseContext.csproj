@@ -21,9 +21,9 @@
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(Configuration)' == 'Release' AND '$(TargetFramework)' == 'netcoreapp3.0' ">
-    <None Include="bin\Release\netcoreapp3.0\Notifi.NET.DatabaseContext.dll" Visible="false" Pack="true" PackagePath="lib\netcoreapp3.0" />
-    <None Include="bin\Release\netcoreapp3.0\Notifi.NET.DatabaseContext.pdb" Visible="false" Pack="true" PackagePath="lib\netcoreapp3.0" />
-    <None Include="bin\Release\netcoreapp3.0\Notifi.NET.DatabaseContext.xml" Visible="false" Pack="true" PackagePath="lib\netcoreapp3.0" />
+    <None Include="bin\Release\netcoreapp3.0\Notifi.NET.DatabaseContext.dll" Pack="true" PackagePath="lib\netcoreapp3.0" />
+    <None Include="bin\Release\netcoreapp3.0\Notifi.NET.DatabaseContext.pdb" Pack="true" PackagePath="lib\netcoreapp3.0" />
+    <None Include="bin\Release\netcoreapp3.0\Notifi.NET.DatabaseContext.xml" Pack="true" PackagePath="lib\netcoreapp3.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,10 +35,6 @@
   
   <ItemGroup>
     <None Include="**\*.cs" Pack="true" PackagePath="src" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="**\*.cs" Exclude="Models/;NotifiDatabaseContext.cs" Visible="false" Pack="false" />
   </ItemGroup>
 
 </Project>

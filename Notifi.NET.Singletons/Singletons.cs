@@ -1,4 +1,6 @@
-﻿using System;
+﻿#pragma warning disable CS1591
+
+using System;
 using System.Net.Http;
 
 namespace Notifi.NET.Singletons
@@ -13,7 +15,6 @@ namespace Notifi.NET.Singletons
 
         public static HttpClient HttpClient
             => LazyHttpClient.Value;
-
 
         public static Random Random
             => LazyRandom.Value;

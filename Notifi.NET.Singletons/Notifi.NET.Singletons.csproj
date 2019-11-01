@@ -1,7 +1,33 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <PackageId>Notifi.NET.Singletons</PackageId>
+    <Product>Notifi.NET.Singletons</Product>
+    <Description>A collection of generic Singletons used in Notifi projects.</Description>
+    <PackageReleaseNotes>Initial Release.</PackageReleaseNotes>
+    <Version>0.1.0</Version>
+    <Authors>Nejc Drobnič, The Notifi Project</Authors>
+    <PackageTags>Notifi</PackageTags>
+
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+
     <TargetFramework>netcoreapp3.0</TargetFramework>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DocumentationFile>bin\Release\Notifi.NET.Singletons.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(Configuration)' == 'Release' AND '$(TargetFramework)' == 'netcoreapp3.0' ">
+    <None Include="bin\Release\netcoreapp3.0\Notifi.NET.Singletons.dll" Pack="true" PackagePath="lib\netcoreapp3.0" />
+    <None Include="bin\Release\netcoreapp3.0\Notifi.NET.Singletons.pdb" Pack="true" PackagePath="lib\netcoreapp3.0" />
+    <None Include="bin\Release\netcoreapp3.0\Notifi.NET.Singletons.xml" Pack="true" PackagePath="lib\netcoreapp3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="**\*.cs" Pack="true" PackagePath="src" />
+  </ItemGroup>
 
 </Project>
