@@ -1,0 +1,22 @@
+<Project>
+  <!-- Package configuration -->
+  <PropertyGroup>
+    <Company>The Notifi Project</Company>
+	<Owners>The Notifi Project</Owners>
+    <PackageIcon>logo.png</PackageIcon>
+
+    <Copyright>Copyright 2019 © The Notifi Project</Copyright>
+    <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
+
+    <RepositoryUrl>https://github.com/thenotifiproject/Notifi.NET</RepositoryUrl>
+    <RepositoryBranch>master</RepositoryBranch>
+    <PackageProjectUrl>https://github.com/thenotifiproject</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)logo.png" Pack="true" PackagePath="" />
+	<None Include="$(MSBuildThisFileDirectory)LICENSE" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+</Project>

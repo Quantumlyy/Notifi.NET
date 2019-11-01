@@ -1,44 +1,44 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
-    <PackageProjectUrl>https://github.com/thenotifiproject</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/thenotifiproject/Notifi.NET</RepositoryUrl>
-    <Company>The Notifi Project</Company>
-    <Authors>Nejc Drobnič, The Notifi Project</Authors>
-    <Copyright>Copyright (C) 2019 &lt;The Notifi Project&gt;</Copyright>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>Notifi</PackageTags>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>0.6.0</Version>
-    <PackageLicenseUrl>https://github.com/thenotifiproject/Notifi.NET/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageIcon>logo.png</PackageIcon>
-    <Description>The Entity Framework Core schema used in Notifi notification microservices.</Description>
-    <Product>Notifi.NET.DatabaseContext</Product>
     <PackageId>Notifi.NET.DatabaseContext</PackageId>
-    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+    <Product>Notifi.NET.DatabaseContext</Product>
+    <Description>The Entity Framework Core schema used in Notifi notification microservices.</Description>
+    <PackageReleaseNotes>Try using .csproj over .nuspec .</PackageReleaseNotes>
+    <Version>1.0.3</Version>
+    <Authors>Nejc Drobnič, The Notifi Project</Authors>
+    <PackageTags>Notifi</PackageTags>
+
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <Platforms>AnyCPU;x64;x86</Platforms>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DocumentationFile>bin\Release\Notifi.NET.DatabaseContext.xml</DocumentationFile>
   </PropertyGroup>
 
+  <ItemGroup Condition=" '$(Configuration)' == 'Release' AND '$(TargetFramework)' == 'netcoreapp3.0' ">
+    <None Include="bin\Release\netcoreapp3.0\Notifi.NET.DatabaseContext.dll" Pack="true" PackagePath="lib\netcoreapp3.0" />
+    <None Include="bin\Release\netcoreapp3.0\Notifi.NET.DatabaseContext.pdb" Pack="true" PackagePath="lib\netcoreapp3.0" />
+    <None Include="bin\Release\netcoreapp3.0\Notifi.NET.DatabaseContext.xml" Pack="true" PackagePath="lib\netcoreapp3.0" />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.0.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.0.1" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
     <PackageReference Include="System.ComponentModel" Version="4.3.0" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.6.0" />
   </ItemGroup>
   
   <ItemGroup>
-      <None Include="publish\logo\logo.png" Pack="true" PackagePath="\" />
+    <None Include="**\*.cs" Pack="true" PackagePath="src" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\;obj\" Visible="false" Pack="false" />
   </ItemGroup>
 
 </Project>
