@@ -20,10 +20,10 @@
     <DocumentationFile>bin\Release\Notifi.NET.DatabaseContext.xml</DocumentationFile>
   </PropertyGroup>
 
-  <ItemGroup Condition=" '$(Configuration)' == 'Release' AND '$(TargetFramework)' == 'netcoreapp3.0' ">
-    <None Include="bin\Release\netcoreapp3.0\Notifi.NET.DatabaseContext.dll" Pack="true" PackagePath="lib\netcoreapp3.0" />
-    <None Include="bin\Release\netcoreapp3.0\Notifi.NET.DatabaseContext.pdb" Pack="true" PackagePath="lib\netcoreapp3.0" />
-    <None Include="bin\Release\netcoreapp3.0\Notifi.NET.DatabaseContext.xml" Pack="true" PackagePath="lib\netcoreapp3.0" />
+  <ItemGroup Condition=" '$(Configuration)' == 'Release' AND '$(TargetFramework)' == 'netcoreapp3.1' ">
+    <None Include="bin\Release\netcoreapp3.1\Notifi.NET.DatabaseContext.dll" Pack="true" PackagePath="lib\netcoreapp3.1" />
+    <None Include="bin\Release\netcoreapp3.1\Notifi.NET.DatabaseContext.pdb" Pack="true" PackagePath="lib\netcoreapp3.1" />
+    <None Include="bin\Release\netcoreapp3.1\Notifi.NET.DatabaseContext.xml" Pack="true" PackagePath="lib\netcoreapp3.1" />
   </ItemGroup>
 
   <ItemGroup>
